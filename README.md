@@ -23,7 +23,7 @@
 
 1.  `terraform` uses [Service Usage API](https://github.com/terraform-providers/terraform-provider-google/blob/master/CHANGELOG.md#1130-may-24-2018),
     this API needs to be enabled manually
-    https://console.cloud.google.com/apis/api/serviceusage.googleapis.com
+    https://console.developers.google.com/apis/library/serviceusage.googleapis.com
 
 2.  Create service account for `terraform` 
     ```
