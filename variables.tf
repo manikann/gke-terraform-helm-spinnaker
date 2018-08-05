@@ -17,5 +17,5 @@ variable "gcs_location" {
 }
 
 variable "temp_dir" {
-  default = "/tmp"
+  default = "."
 }

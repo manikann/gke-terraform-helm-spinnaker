@@ -40,7 +40,7 @@ module "gke_cluster" {
   source             = "modules/cluster"
   name               = "demo"
   initial_node_count = "2"
-  machine_type       = "n1-standard-2"
+  machine_type       = "n1-standard-4"
 }
 
 # k8s provider is used for installing helm

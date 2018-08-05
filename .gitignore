@@ -16,7 +16,13 @@ terraform.plan
 
 # credetnials
 account.json
+.kubeconfig
+.spinnaker-values.yaml
+.cluster_ca_certificate
+.client_certificate
+.client_key
 
 # IDEA
 .idea
 *.iml
+
