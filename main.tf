@@ -30,6 +30,8 @@ resource "google_project_services" "myproject" {
     "replicapool.googleapis.com",
     "replicapoolupdater.googleapis.com",
     "resourceviews.googleapis.com",
+    "cloudbuild.googleapis.com",
+    "sourcerepo.googleapis.com"
   ]
 }
 
