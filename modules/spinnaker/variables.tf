@@ -30,8 +30,8 @@ variable "spinnaker_gcs_sa" {
 }
 
 variable "temp_dir" {
-  default     = "/tmp"
-  description = "Temporary directory used for storing kubeconfig, certs files"
+  default     = "."
+  description = "Temporary directory used for storing spinnaker-values.yaml."
 }
 
 # Refer https://medium.com/@bonya/terraform-adding-depends-on-to-your-custom-modules-453754a8043e

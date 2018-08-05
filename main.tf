@@ -31,15 +31,15 @@ resource "google_project_services" "myproject" {
     "replicapoolupdater.googleapis.com",
     "resourceviews.googleapis.com",
     "cloudbuild.googleapis.com",
-    "sourcerepo.googleapis.com"
+    "sourcerepo.googleapis.com",
   ]
 }
 
 # Create GKE cluster
 module "gke_cluster" {
   source             = "modules/cluster"
-  name               = "demo"
-  initial_node_count = "2"
+  name               = "${var.name}"
+  initial_node_count = "3"
   machine_type       = "n1-standard-4"
 }
 
@@ -67,7 +67,6 @@ module "kubectl_config" {
   client_certificate     = "${module.gke_cluster.client_certificate}"
   client_key             = "${module.gke_cluster.client_key}"
   cluster_ca_certificate = "${module.gke_cluster.cluster_ca_certificate}"
-  temp_dir               = "${var.temp_dir}"
 }
 
 #Initialize and configure helm

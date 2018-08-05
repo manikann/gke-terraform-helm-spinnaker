@@ -1,5 +1,5 @@
 variable "temp_dir" {
-  default     = "/tmp"
+  default     = "."
   description = "Temporary directory used for storing kubeconfig, certs files"
 }
 

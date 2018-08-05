@@ -16,6 +16,8 @@ variable "gcs_location" {
   default = "Asia"
 }
 
-variable "temp_dir" {
-  default = "."
+variable "name" {
+  default = "spinnaker"
+  description = "GKE cluster name"
 }
+
