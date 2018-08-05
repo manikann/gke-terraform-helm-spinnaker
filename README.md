@@ -10,12 +10,13 @@
     * [helm CLI](https://docs.helm.sh/using_helm/#installing-helm)
     
 ### Variables
-* `credential`: Contents of a file that contains terraform service account private key in JSON format. Default filename is accounts.json
+* `credential`: Contents of a file that contains terraform service account private key in JSON format.
+   Default filename is account.json. Refer the below installation steps to generate this file
 * `project`: The ID of the GCP project
 * `zone`: [Compute engine zone](https://cloud.google.com/compute/docs/regions-zones/) where GKE cluster needs to be created 
 * `gcs_location`: Cloud storage [bucket location](https://cloud.google.com/storage/docs/bucket-locations) for storing spinnaker data
     > By default [Nearline](https://cloud.google.com/storage/docs/storage-classes#nearline) storage class is configured. 
-    Ensure the correct location based on the `zone` is configured
+    Ensure the correct location based on the configured `zone` 
 
 
 ## Installation steps
