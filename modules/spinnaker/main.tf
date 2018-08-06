@@ -51,6 +51,7 @@ accounts:
   password: '$${sa_json}'
 EOI
 EOF
+
   vars {
     bucket     = "${google_storage_bucket.spinnaker_config.name}"
     project    = "${var.project}"
@@ -83,9 +84,10 @@ EOF
     service_account = "${var.service_account}"
     crb_name        = "${var.service_account}-admin-binding"
     values_yaml     = "${var.temp_dir}/.spinnaker-values.yaml"
-    host = "${var.host}"
+    host            = "${var.host}"
+
     # Wait for values.yaml to be available
-    depends_on      = "${null_resource.spinnaker_config.id}"
+    depends_on = "${null_resource.spinnaker_config.id}"
   }
 
   depends_on = [
