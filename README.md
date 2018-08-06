@@ -34,7 +34,7 @@
     
 3.  Grant owner role to terraform service account    
     ```
-    gcloud projects add-iam-policy-binding $(gcloud info --format='value(config.project)') --member serviceAccount:terraform@$(gcloud info --format='value(config.project)').iam.gserviceaccount
+    gcloud projects add-iam-policy-binding $(gcloud info --format='value(config.project)') --member serviceAccount:terraform@$(gcloud info --format='value(config.project)').iam.gserviceaccount.com --role roles/owner
     ```
     
 4.  Execute below commands. This will take some time to complete (5 to 8 mins)
