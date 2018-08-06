@@ -32,18 +32,23 @@
     ```
     Above command will download the key and store it in `account.json` file
     
-3.  Execute below commands. This will take some time to complete (5 to 8 mins)
+3.  Grant owner role to terraform service account    
+    ```
+    gcloud projects add-iam-policy-binding $(gcloud info --format='value(config.project)') --member serviceAccount:terraform@$(gcloud info --format='value(config.project)').iam.gserviceaccount
+    ```
+    
+4.  Execute below commands. This will take some time to complete (5 to 8 mins)
     ```
     terraform init
     terraform plan -out terraform.plan
     terraform apply terraform.plan 
     ```
     
-4.  After the command completes, run the following command to set up port forwarding to the Spinnaker UI 
+5.  After the command completes, run the following command to set up port forwarding to the Spinnaker UI 
     ```
     export KUBECONFIG=$PWD/.kubeconfig 
     export DECK_POD=$(kubectl get pods --namespace default -l "component=deck" -o jsonpath="{.items[0].metadata.name}")
     kubectl port-forward --namespace default $DECK_POD 8080:9000 >> /dev/null &
     ```
     
-5.  Access spinnaker UI at http://localhost:8080/ 
+6.  Access spinnaker UI at http://localhost:8080/ 
