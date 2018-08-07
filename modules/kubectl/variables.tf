@@ -4,7 +4,7 @@ variable "temp_dir" {
 }
 
 variable "kubeconfig_file" {
-  default     = "/tmp/.kubeconfig"
+  default     = "./.kubeconfig"
   description = "Kube config file path"
 }
 
