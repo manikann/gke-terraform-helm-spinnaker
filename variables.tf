@@ -4,16 +4,16 @@ variable "credential" {
 }
 
 variable "project" {
-  default     = "mani-learn-gcp"
   description = "The ID of the project to apply any resources to."
 }
 
 variable "zone" {
-  default = "asia-southeast1-b"
+  description = "GCP zone in which all the resource will be created"
 }
 
+// https://cloud.google.com/storage/docs/bucket-locations
 variable "gcs_location" {
-  default = "Asia"
+  description = "Regional Location for google cloud storage"
 }
 
 variable "name" {
